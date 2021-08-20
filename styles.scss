@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@600&display=swap');
+
+// Colors
+$base-color-1: #FFFFFF;
+$button-color-1: #60D9FF;
+$button-color-2: #1D74FF;
+$bs-inner: inset 4px 4px 8px rgba(175, 230, 255, 0.521689), inset -4px -4px 8px rgba(19, 95, 216, 0.356998);
+$bs-outer-initial: 0px 0px 20px rgba(71, 184, 255, 0.5), 0px 5px 5px -1px rgba(58, 125, 233, 0.245848);
+$bs-outer-secondary: 0px 5px 50px rgba(71, 184, 255, 0.75), 0px 10px 10px -4px rgba(58, 125, 233, 0.360113);
+
+
+// Properties
+$button-radius: 22px;
+
+// Fonts
+$base-font: 'Recursive', sans-serif;
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	width: 100vw;
+	min-height: 100vh;
+
+	font-size: max(5vmin, 16px);
+  
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+button {
+	font-family: $base-font;
+	font-size: 52px;
+	line-height: 61px;
+	text-align: center;
+	cursor: pointer;
+	color: $base-color-1;
+	border: none;
+	border-radius: $button-radius;
+	padding: 42px 61px 44px 60px;
+
+   transition: 0.5s;
+	background-size: 250%;
+	background-image: linear-gradient(322.24deg, $button-color-2, $button-color-1 50%, $button-color-2 75%);
+	box-shadow: $bs-outer-initial, $bs-inner;	 		
+}
+
+button:hover {
+  background-position: right center;
+  box-shadow: $bs-outer-secondary, $bs-inner;
+}
